@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Tropoja - Albania's Hidden Gem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #4a6285;
+        }
+        
+        .hero {
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2ecc71;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+        
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .attraction-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tropoja</h1>
+        <p>Discover Albania's Hidden Mountain Paradise</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="hero" style="background-image: url('https://akt.gov.al/wp-content/uploads/2023/10/G0289402-Copy-1.jpg')">
+        <div class="hero-content">
+            <h1>Experience Tropoja</h1>
+            <p>Where rugged mountains meet cultural heritage in Northern Albania</p>
+            <a href="#attractions" class="btn">Explore Now</a>
+        </div>
+    </div>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Tropoja</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://gazetadielli.com/wp-content/uploads/2024/10/unnamed-6.jpg" alt="Tropoja Landscape" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 1rem; color: #2c3e50;">Albania's Mountain Paradise</h3>
+                    <p style="margin-bottom: 1rem; line-height: 1.6;">
+                        Nestled in the Albanian Alps in the northernmost part of Albania, Tropoja is a region of breathtaking natural beauty. With its dramatic mountain landscapes, crystal-clear rivers, and traditional villages, Tropoja offers visitors an authentic glimpse into Albanian mountain culture.
+                    </p>
+                    <p style="margin-bottom: 1rem; line-height: 1.6;">
+                        The area is known for its warm hospitality, delicious local cuisine, and rich folklore traditions. Whether you're looking for adventure, cultural experiences, or simply a peaceful retreat in nature, Tropoja has something to offer every traveler.
+                    </p>
+                    <p style="line-height: 1.6;">
+                        The region gained international recognition after being featured in the movie "Taken," but the real Tropoja is a place of stunning beauty and cultural richness that goes far beyond cinema depictions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="attractions" class="section" style="background-color: #eaeaea;">
+        <div class="container">
+            <h2 class="section-title">Top Attractions</h2>
+            <div class="attractions">
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://eia476h758b.exactdn.com/wp-content/uploads/2023/12/Valbona-Valley-National-Park-Albania.jpeg?strip=all&lossy=1&ssl=1')"></div>
+                    <div class="card-content">
+                        <h3>Valbona Valley National Park</h3>
+                        <p>Experience one of Albania's most spectacular natural wonders with pristine alpine landscapes, crystal-clear rivers, and diverse wildlife.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://www.snoezelsontheroad.com/wp-content/uploads/2023/10/coverfoto-hiking-Albanie.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Valbona to Theth Hike</h3>
+                        <p>This iconic hiking trail takes you through some of the most beautiful mountain scenery in the Balkans, connecting two remarkable alpine villages.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://i.pinimg.com/736x/48/92/6f/48926fa53ad50aeb1785bead91e7fcc2.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Bajram Curri</h3>
+                        <p>The main town of Tropoja offers a glimpse into local life with its colorful markets, traditional architecture, and authentic Albanian cuisine.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://i0.wp.com/wanderwithlaura.com/wp-content/uploads/2022/08/Berat-Bogova-Waterfall.jpg?resize=1024%2C650&ssl=1')"></div>
+                    <div class="card-content">
+                        <h3>Ragam Waterfall</h3>
+                        <p>A spectacular natural wonder where water cascades down rocky cliffs surrounded by lush vegetation and alpine meadows.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://d34ad2g4hirisc.cloudfront.net/volunteer_positions/photos/000/087/491/thumb/IMG_1482.jpeg')"></div>
+                    <div class="card-content">
+                        <h3>Traditional Villages</h3>
+                        <p>Explore charming mountain villages where time seems to stand still, offering authentic cultural experiences and warm Albanian hospitality.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-card">
+                    <div class="card-img" style="background-image: url('https://visitshalariver.com/wp-content/uploads/2024/11/Boat-Komani-Lake-to-Shala-River-Albania-Miki-Tours.jpg')"></div>
+                    <div class="card-content">
+                        <h3>Komani Lake</h3>
+                        <p>Take a boat trip through the fjord-like Komani Lake with its turquoise waters and dramatic mountain scenery on all sides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('https://akt.gov.al/wp-content/uploads/2023/10/fot-11.jpg')"></div>
+                <div class="gallery-item" style="background-image: url('https://theonearmedcrab.com/wp-content/uploads/2015/07/0095_466-800x532.jpg')"></div>
+                <div class="gallery-item" style="background-image: url('https://www.kultplus.com/wp-content/uploads/2024/06/446805809_1013015633527431_6373797303562163859_n-696x463-1.jpg')"></div>
+                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Bajram_Curri_Panoram%C3%AB_01.JPG')"></div>
+                <div class="gallery-item" style="background-image: url('https://www.votramagazine.com/wp-content/uploads/2024/12/Tropoja.webp')"></div>
+                <div class="gallery-item" style="background-image: url('https://cdnimpuls.com/politiko.al/media3/-640-0-62d2c8d8f2282.jpg')"></div>
+                <div class="gallery-item" style="background-image: url('https://theonearmedcrab.com/wp-content/uploads/2015/07/0095_463-532x800.jpg')"></div>
+                <div class="gallery-item" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXa0Kym5WfF09EQ9XdUYHd_5pyvUcs292vg&s')"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section" style="background-color: #eaeaea;">
+        <div class="container">
+            <h2 class="section-title">Plan Your Visit</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <div style="flex: 1; min-width: 300px; background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <h3 style="margin-bottom: 1rem; color: #2c3e50;">Contact Information</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Tourist Information Center:</strong> +355 69 344 5557</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> info@tropoja-tourism.com</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Address:</strong> Bajram Curri, Tropoja, Albania</p>
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="margin-bottom: 0.5rem; color: black;">Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px; background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <h3 style="margin-bottom: 1rem; color: #2c3e50;">Getting Here</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>By Car:</strong> Approximately 4 hours from Tirana via SH1 and SH5</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>By Bus:</strong> Daily buses from Tirana to Bajram Curri</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>By Ferry:</strong> Scenic route via Komani Lake ferry from Koman to Fierza</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Best Time to Visit:</strong> May to October</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Discover Tropoja - The Heart of Albanian Alps</p>
+            <p style="margin-top: 1rem;">This website is for demonstration purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>
